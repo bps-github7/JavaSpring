@@ -2,10 +2,15 @@ package com.example.demo.model;
 
 import java.util.UUID;
 
+//working on validation... this seems to be deprecated. or missing the javax package...
+// import javax.annotation.NotBlank;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Person {
     private final UUID id;
+
+    // @NotBlank
     private final String name;
 
     public Person(@JsonProperty("id") UUID id, @JsonProperty("name") String name) {

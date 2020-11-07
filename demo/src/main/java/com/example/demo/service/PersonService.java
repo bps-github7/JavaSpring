@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import com.example.demo.dao.PersonDao;
 import com.example.demo.model.Person;
@@ -20,22 +22,24 @@ public class PersonService {
         this.personDao = personDao;
     }
 
-    /*
-     * Note for here or elsewhere-
-     * 
-     * when you GET request the api, body comes back with name = null meaning the
-     * write to the database failed (i am assuming)
-     * 
-     * after some further testing. yes, i am pretty sure you need to configure your
-     * app so that it is hooked up to a database. lets use postGRE (used sqlite3 for
-     * rails and djano already)...
-     */
     public int addPerson(Person person) {
         return personDao.insertPerson(person);
     }
 
     public List<Person> getAllPeople() {
         return personDao.selectAllPeople();
+    }
+
+    public Optional<Person> getPersonById(UUID id) {
+        return personDao.selectPersonById(id);
+    }
+
+    public int deletePerson(UUID id) {
+        return personDao.deletePersonById(id);
+    }
+
+    public int updatePerson(UUID id, Person newPerson) {
+        return personDao.updatePersonById(id, newPerson);
     }
 
 }
