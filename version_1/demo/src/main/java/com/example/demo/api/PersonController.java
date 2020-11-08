@@ -7,7 +7,7 @@ import com.example.demo.model.Person;
 import com.example.demo.service.PersonService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,7 +49,7 @@ public class PersonController {
     }
 
     @PutMapping(path = "{id}")
-    public void updatePerson(@PathVariable("id") UUID id, @RequestBody Person personToUpdate) {
+    public void updatePerson(@PathVariable("id") UUID id, @NonNull @RequestBody Person personToUpdate) {
         personService.updatePerson(id, personToUpdate);
     }
 }

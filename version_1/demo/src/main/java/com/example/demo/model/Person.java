@@ -7,10 +7,12 @@ import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import org.springframework.lang.NonNull;
+
 public class Person {
     private final UUID id;
 
-    // @NotBlank
+    @NonNull
     private final String name;
 
     public Person(@JsonProperty("id") UUID id, @JsonProperty("name") String name) {
