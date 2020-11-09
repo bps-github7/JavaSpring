@@ -2,8 +2,18 @@
 
 ### A quick walkthrough of the Java Spring web framework
 
-### To View the application, boot the spring project on your system using maven or a extension like Spring-Boot-loader
+### This application currently has two versions. both intending to implement a simple RESTful api 
+version two adds a persistency layer by writing user data to a postgresql container image.
+niether versions have a view/ User interface, but can be loaded with the spring boot dashboard
+and by visiting the following
 
-then in the browser, navigate to page
 
-- 'localhost:9898/hello'
+for version 1:
+```
+localhost:9898 
+```
+
+for version 2:
+```
+localhost:8080
+```
