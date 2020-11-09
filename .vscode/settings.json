@@ -1,0 +1,12 @@
+{
+    "java.home": "C:\\Program Files\\Java\\jdk-14.0.2",
+"java.configuration.runtimes": [
+    {
+        "name": "JavaSE-14",
+        "path": "C:\\Program Files\\Java\\jdk-14.0.2",
+        "sources": "C:\\Program Files\\Java\\jdk-14.0.2\\lib\\src.zip",
+        "javadoc": "https://docs.oracle.com/en/java/javase/14/docs/api",
+        "default": true
+    },      
+],
+}
