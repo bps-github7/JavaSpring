@@ -27,10 +27,22 @@ public class AuthFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
+        /*
+         * doFilter method authenticates requests by: 1. Checking for authorization
+         * header 2. perform validation, returning forbidden AC and error message if
+         * auth code is missing, invalid or expired.
+         * 
+         */
+
+        // Type casting some arguments from servletRequest to HttpServletRequest.
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
 
+        // Get the header from the incoming http request, looking at the authorization
+        // attribute
         String authHeader = httpRequest.getHeader("Authorization");
+
+        // Validation occurs here
         if (authHeader != null) {
             String[] authHeaderArr = authHeader.split("Bearer ");
             if (authHeaderArr.length > 1 && authHeaderArr[1] != null) {

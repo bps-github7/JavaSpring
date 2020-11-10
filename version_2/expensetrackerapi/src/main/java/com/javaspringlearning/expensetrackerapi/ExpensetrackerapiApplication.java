@@ -19,7 +19,7 @@ public class ExpensetrackerapiApplication {
         FilterRegistrationBean<AuthFilter> registrationBean = new FilterRegistrationBean<>();
         AuthFilter authFilter = new AuthFilter();
         registrationBean.setFilter(authFilter);
-        registrationBean.addUrlPatterns("api/categories/*");
+        registrationBean.addUrlPatterns("/api/categories/*");
         return registrationBean;
     }
 

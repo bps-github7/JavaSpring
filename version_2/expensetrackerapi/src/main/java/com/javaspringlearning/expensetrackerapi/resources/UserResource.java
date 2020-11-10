@@ -32,8 +32,6 @@ public class UserResource {
         String email = (String) userMap.get("email");
         String password = (String) userMap.get("password");
         User user = userService.validateUser(email, password);
-        Map<String, String> map = new HashMap<>();
-        map.put("message", "Logged in Successfuly");
         return new ResponseEntity<>(generateJWTToken(user), HttpStatus.OK);
     }
 
@@ -44,14 +42,11 @@ public class UserResource {
         String email = (String) userMap.get("email");
         String password = (String) userMap.get("password");
 
-        // V1 test- does hitting endpoint 8080/api/users/register with POST get this
-        // response?
-        // return firstName + ", " + lastName + ", " + email + ", " + password;
-
-        // V2
+        // Invokes the registerUser method and assign the return value to a variable of
+        // User type.
         User user = userService.registerUser(firstName, lastName, email, password);
-        Map<String, String> map = new HashMap<>();
-        map.put("Message", "Registered succesfully!");
+
+        // return a ResponseEntity that contains the JWT and HttpStatus 200 (ok).
         return new ResponseEntity<>(generateJWTToken(user), HttpStatus.OK);
     }
 
