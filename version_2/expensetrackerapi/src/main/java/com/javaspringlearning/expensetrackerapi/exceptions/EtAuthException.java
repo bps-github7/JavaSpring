@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.UNAUTHORIZED)
 public class EtAuthException extends RuntimeException {
 
-    // static final long serialVersionUID = 1;
+    /**
+     * To complete extension without problems/ complaints from linter.
+     */
+    private static final long serialVersionUID = -3371679041672878586L;
 
     public EtAuthException(String message) {
         super(message);
