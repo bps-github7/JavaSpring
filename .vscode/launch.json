@@ -3,25 +3,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Hello",
-            "request": "launch",
-            "mainClass": "Hello"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - ExpensetrackerapiApplication",
+            "name": "ExpensetrackerapiApplication",
             "request": "launch",
             "mainClass": "com.javaspringlearning.expensetrackerapi.ExpensetrackerapiApplication"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-DemoApplication<demo>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "mainClass": "com.example.demo.DemoApplication",
-            "projectName": "demo",
-            "args": ""
         }
     ]
 }

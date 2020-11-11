@@ -35,6 +35,10 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     private static final String SQL_UPDATE = "UPDATE ET_CATEGORIES SET TITLE = ?, DESCRIPTION = ? "
             + "WHERE USER_ID = ? AND CATEGORY_ID = ?";
 
+    private static final String SQL_DELETE_CATEGORY = "DELETE FROM ET_CATEGORIES WHERE USER_ID = ? AND CATEGORY_ID";
+
+    private static final String SQL_DELETE_ALL_TRANSACTIONS = ""
+
     @Autowired
     JdbcTemplate jdbcTemplate;
 

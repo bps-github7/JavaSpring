@@ -30,7 +30,7 @@ create table et_transactions(
     user_id integer not null,
     amount numeric(18,2) not null,
     note varchar(50) not null,
-    transaction_data bigint not null
+    transaction_date bigint not null
 );
 
 alter table et_transactions add constraint trans_cat_fk
