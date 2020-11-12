@@ -1,0 +1,14 @@
+#header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: darkslategrey;
+  color: #ffffff;
+  border-bottom: 18px groove greenyellow;
+  border-top: 18px groove greenyellow;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 6rem;
+  padding-right: 5rem;
+}

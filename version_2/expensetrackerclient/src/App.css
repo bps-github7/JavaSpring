@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  max-width: 120rem;
+}
+
+#nav {
+  background-color: #000000;
+  color: white;
+  border-bottom: 2px groove grey;
+}
+
+#nav li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+
+.table {
+  float: right;
+  padding-left: 30px;
+}
+
+table {
+  border: 2px solid black;
+  max-width: 120rem;
+}
+
+td,
+tr {
+  padding: 0 4rem 0 6rem;
+}
