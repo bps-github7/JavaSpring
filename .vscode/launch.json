@@ -6,6 +6,16 @@
             "name": "ExpensetrackerapiApplication",
             "request": "launch",
             "mainClass": "com.javaspringlearning.expensetrackerapi.ExpensetrackerapiApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ExpensetrackerapiApplication<expensetrackerapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.javaspringlearning.expensetrackerapi.ExpensetrackerapiApplication",
+            "projectName": "expensetrackerapi",
+            "args": ""
         }
     ]
 }

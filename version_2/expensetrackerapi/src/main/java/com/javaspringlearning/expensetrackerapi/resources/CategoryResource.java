@@ -73,7 +73,7 @@ public class CategoryResource {
 
     @DeleteMapping("/{categoryId}")
     public ResponseEntity<Map<String, Boolean>> deleteCategory(HttpServletRequest request,
-            @PathVariable("categoryId") Integer categoryId, @RequestBody Category category) {
+            @PathVariable("categoryId") Integer categoryId) {
         /* 
         */
         int userId = (Integer) request.getAttribute("userId");
