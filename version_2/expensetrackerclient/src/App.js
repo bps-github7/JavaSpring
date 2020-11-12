@@ -1,10 +1,15 @@
 import './App.css';
 import React, { Component } from 'react';
 import Header from './components/layout/Header';
-import Transactions from './components/Transactions';
-import Categories from './components/Categories';
-import TransactionForm from './components/forms/TransactionForm';
-import CategoryForm from './components/forms/CategoryForm';
+import Home from './components/layout/Home';
+import About from './components/layout/About'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+  } from "react-router-dom";
+import LoginForm from './components/forms/LoginForm';
+import RegistrationForm from './components/forms/RegistrationForm';
 
 
 
@@ -22,14 +27,25 @@ class App extends Component {
     }
     render() { 
         return (
-            <div className="App">
-                <Header />
-                <TransactionForm/>
-                <Transactions/>
-
-                <CategoryForm/>
-                <Categories/>
-            </div>
+            <Router class="App">
+                <Header/>
+                <div>
+                    <Switch>
+                        <Route path="/about">
+                            <About />
+                        </Route>
+                        <Route path="/login">
+                            <LoginForm />
+                        </Route>
+                        <Route path="/registration">
+                            <RegistrationForm />
+                        </Route>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
 
           );
     }
